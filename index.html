@@ -531,10 +531,42 @@ main { padding: 0 var(--gutter) 0; max-width: 1020px; }
 .article-date .yr { display: block; font-size: 22px; color: var(--btn-color); font-weight: 700; font-family: var(--font-serif); }
 .article-org { font-family: var(--font-serif); font-size: 24px; font-weight: 700; color: var(--text-main); margin-bottom: 4px; }
 .article-role { font-size: 12.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--btn-color); margin-bottom: 18px; }
-.article-bullets { display: flex; flex-direction: column; gap: 12px; margin-bottom: 18px; }
+/* .article-bullets { display: flex; flex-direction: column; gap: 12px; margin-bottom: 18px; }
 .article-bullet { display: flex; gap: 12px; font-size: 14px; color: var(--text-sub); line-height: 1.75; }
-.article-bullet .mark { font-family: var(--font-serif); color: var(--btn-color); flex-shrink: 0; font-weight: 700; }
+.article-bullet .mark { font-family: var(--font-serif); color: var(--btn-color); flex-shrink: 0; font-weight: 700; } */
+.article-bullet {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 14px;
+  color: var(--text-sub);
+  line-height: 1.75;
+}
+
+.article-bullet .mark {
+  color: var(--btn-color);
+  flex: 0 0 auto;
+  font-weight: 700;
+  line-height: 1.75;
+}
+
+.article-bullet .bullet-text {
+  display: block;
+  flex: 1;
+  min-width: 0;
+}
+
+.article-bullet .hl {
+  color: var(--btn-color);
+  font-weight: 700;
+
+  /* 重点：黄色短语内部不换行 */
+  white-space: nowrap;
+}
 .article-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.article-tags {
+  margin-top: 24px;
+}
 .article-tag { font-family: var(--font-mono); font-size: 10.5px; font-weight: 500; letter-spacing: 0.5px; color: var(--text-sub); border: 1px solid var(--line); padding: 4px 12px; }
 
 @media (max-width: 900px) {
@@ -1087,7 +1119,7 @@ footer { text-align: center; padding: 36px 24px; font-family: var(--font-mono); 
       </section>
 
       <!-- ============ 经历 ============ -->
-      <section class="section" id="experience">
+      <!-- <section class="section" id="experience">
 
         <div class="sec-header reveal">
           <div class="sec-title-group">
@@ -1191,7 +1223,280 @@ footer { text-align: center; padding: 36px 24px; font-family: var(--font-mono); 
           </div>
         </div>
 
-      </section>
+      </section> -->
+
+      <section class="section" id="experience">
+
+  <!-- =====================================================
+       SECTION HEADER
+  ====================================================== -->
+  <div class="sec-header reveal">
+    <div class="sec-title-group">
+      <p class="sec-eyebrow">
+        <span class="slash">//</span>
+        career &amp; projects
+      </p>
+
+      <h2 class="sec-title">Experience</h2>
+    </div>
+
+    <span class="sec-folio">// 02</span>
+  </div>
+
+
+  <!-- =====================================================
+       01 — ASTRAZENECA
+  ====================================================== -->
+  <div class="article-item reveal">
+
+    <!-- Date -->
+    <div class="article-date">
+      <span class="yr">2025</span>
+      Jan – May
+    </div>
+
+    <!-- Content -->
+    <div class="article-content">
+
+      <h3 class="article-org">
+        AstraZeneca
+      </h3>
+
+      <p class="article-role">
+        Innovation &amp; Strategy Intern
+      </p>
+
+
+      <!-- Bullet Points -->
+      <div class="article-bullets">
+
+        <div class="article-bullet">
+          <span class="mark">—</span>
+
+          <span class="bullet-text">
+            Partnered with trainers and internal stakeholders to support
+            digital upskilling programs for
+            <span class="hl hl-nowrap">100+ participants</span>,
+            enabling adoption of self-service reporting and automation tools,
+            resulting in improved workflow efficiency and a stronger
+            data-driven decision-making culture.
+          </span>
+        </div>
+
+
+        <div class="article-bullet">
+          <span class="mark">—</span>
+
+          <span class="bullet-text">
+            Consulted on and supported over
+            <span class="hl">
+              40 automation and data analytics projects
+            </span>
+            within the finance function in Kuala Lumpur, enabling smoother
+            financial reporting and providing stakeholders with a more
+            comprehensive view of financial processes.
+          </span>
+        </div>
+
+
+        <div class="article-bullet">
+          <span class="mark">—</span>
+
+          <span class="bullet-text">
+            Developed and implemented automation solutions across multiple
+            departments, saving an estimated
+            <span class="hl">
+              10–200 working hours annually per project
+            </span>.
+          </span>
+        </div>
+
+
+        <div class="article-bullet">
+          <span class="mark">—</span>
+
+          <span class="bullet-text">
+            Delivered over
+            <span class="hl hl-nowrap">
+              15 automation initiatives
+            </span>,
+            including SAP Data Extraction, BSR Automation, OCR Systems,
+            Automated Inquiry Resolution Platform, and Leaver Tracker,
+            collectively enhancing process efficiency and reducing manual
+            workload.
+          </span>
+        </div>
+
+      </div>
+
+
+      <!-- Tags -->
+      <div class="article-tags">
+        <span class="article-tag">10–200 hrs saved / project</span>
+        <span class="article-tag">40+ projects</span>
+        <span class="article-tag">Python</span>
+        <span class="article-tag">Power BI</span>
+        <span class="article-tag">SAP</span>
+        <span class="article-tag">OCR</span>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- =====================================================
+       02 — FINAL YEAR PROJECT
+  ====================================================== -->
+  <div class="article-item reveal">
+
+    <!-- Date -->
+    <div class="article-date">
+      <span class="yr">2024</span>
+      July
+    </div>
+
+    <!-- Content -->
+    <div class="article-content">
+
+      <h3 class="article-org">
+        Final Year Project
+      </h3>
+
+      <p class="article-role">
+        Social Media Sentiment Analysis —
+        Taylor Swift's Eras Tour (Singapore)
+      </p>
+
+
+      <!-- Bullet Points -->
+      <div class="article-bullets">
+
+        <div class="article-bullet">
+          <span class="mark">—</span>
+
+          <span class="bullet-text">
+            Conducted a
+            <span class="hl">
+              large-scale sentiment analysis
+            </span>
+            on social media data to evaluate public reactions toward the
+            concert announcement in Singapore.
+          </span>
+        </div>
+
+
+        <div class="article-bullet">
+          <span class="mark">—</span>
+
+          <span class="bullet-text">
+            Delivered an analytical report on audience emotions and engagement
+            trends, identifying key behavioral patterns and engagement
+            preferences from the data.
+          </span>
+        </div>
+
+
+        <div class="article-bullet">
+          <span class="mark">—</span>
+
+          <span class="bullet-text">
+            Communicated sentiment trends through data visualization and
+            storytelling to help audiences understand the overall public
+            impact and reaction.
+          </span>
+        </div>
+
+
+        <div class="article-bullet">
+          <span class="mark">—</span>
+
+          <span class="bullet-text">
+            Utilized
+            <span class="hl hl-nowrap">R Studio</span>
+            for text mining and sentiment classification, and
+            <span class="hl hl-nowrap">Tableau</span>
+            for data visualization and insight presentation.
+          </span>
+        </div>
+
+      </div>
+
+
+      <!-- Tags -->
+      <div class="article-tags">
+        <span class="article-tag">R Studio</span>
+        <span class="article-tag">Tableau</span>
+        <span class="article-tag">Text Mining</span>
+        <span class="article-tag">NLP</span>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- =====================================================
+       03 — DATA SPARK COMPETITION
+  ====================================================== -->
+  <div class="article-item reveal">
+
+    <!-- Date -->
+    <div class="article-date">
+      <span class="yr">2024</span>
+      May
+    </div>
+
+    <!-- Content -->
+    <div class="article-content">
+
+      <h3 class="article-org">
+        Data Spark Competition
+      </h3>
+
+      <p class="article-role">
+        Competitor — Top 6 Finalist
+      </p>
+
+
+      <!-- Bullet Points -->
+      <div class="article-bullets">
+
+        <div class="article-bullet">
+          <span class="mark">—</span>
+
+          <span class="bullet-text">
+            Achieved
+            <span class="hl hl-nowrap">Top 6</span>
+            in the competition by analyzing global QS university datasets
+            to identify trends in international student distribution,
+            research output, and institutional performance.
+          </span>
+        </div>
+
+
+        <div class="article-bullet">
+          <span class="mark">—</span>
+
+          <span class="bullet-text">
+            Collaborated in a team to deliver data-driven insights and present
+            findings on stage to judges and participants, demonstrating strong
+            analytical and presentation skills.
+          </span>
+        </div>
+
+      </div>
+
+
+      <!-- Tags -->
+      <div class="article-tags">
+        <span class="article-tag">Top 6 Finalist</span>
+        <span class="article-tag">Data Analysis</span>
+        <span class="article-tag">Presentation</span>
+      </div>
+
+    </div>
+  </div>
+
+</section>
 
       <!-- ============ 教育 ============ -->
       <section class="section" id="education">
